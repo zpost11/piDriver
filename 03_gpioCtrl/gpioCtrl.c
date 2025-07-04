@@ -2,8 +2,8 @@
 #include <linux/init.h>
 #include <linux/gpio/consumer.h>
 
-static struct gpiod_desc *led;
-static struct gpiod_desc *button;
+static struct gpio_desc *led;
+static struct gpio_desc *button;
 
 const int PinOffset = 512;
 const int IO_LED = 21 + PinOffset;
