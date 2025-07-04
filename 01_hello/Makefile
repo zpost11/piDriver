@@ -1,3 +1,4 @@
+# makes comments in make
 obj-m += hello.o
 
 all:
