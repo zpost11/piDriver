@@ -18,7 +18,7 @@ static int __init my_init(void)
 
 static void __exit my_exit(void)
 {
-    unregitser_chrdev(major, "hello_cdev");
+    unregister_chrdev(major, "hello_cdev");
     printk("Goodbye - Goodbye, Kernel!\n");
 }
 
