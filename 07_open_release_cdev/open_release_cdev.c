@@ -3,12 +3,12 @@
 #include <linux/fs.h>
 
 static int major;
-ststic int my_open( struct inode *inode, struct file *filp )
+static int my_open( struct inode *inode, struct file *filp )
 {
 	pr_info( "open_release_cdev - Major Device Number: %d\n Minor Device Number %d\n", imajor(inode), iminor(inode));
 
 	pr_info( "open_release_cdev - filp->f_pos: %lld\n", filp->f_pos );
-	pr_info( "open_release_cdev - filp->f_mod: 0x%x\n", filp->f_mod );
+	pr_info( "open_release_cdev - filp->f_mode: 0x%x\n", filp->f_mode );
 	pr_info( "open_release_cdev - filp->f_flags %x\n", filp->f_flags );			
 
 	return 0;
