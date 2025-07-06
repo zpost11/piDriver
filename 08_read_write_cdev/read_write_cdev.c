@@ -22,8 +22,8 @@ static ssize_t my_read(struct file *filp, char __user *user_buf, size_t len, lof
 
 	if (*off >= sizeof(text)) 
 	{
-		pr_warn("read_write_cdev - offest greater than buffer size\n");
-		return = 0; //will fix this after completing tutorial
+		pr_warn("read_write_cdev - offset greater than buffer size\n");
+		return 0; //will fix this after completing tutorial
 	}
 
 	not_copied = copy_to_user(user_buf, &text[*off], to_copy);
